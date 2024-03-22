@@ -1,2 +1,2 @@
-zut[extra] >= 0.9
+zut[commons] >= 0.9
 pyyaml
