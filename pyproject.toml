@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reporter-utils"
+authors = [{ name="Sébastien Hocquet", email="dev@ipamo.net" }]
+description = "Shared utilities for data extraction."
+readme = "README.md"
+keywords = ["data", "extraction", "reporter", "shared", "utils", "utilities"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+]
+requires-python = ">=3.8" # we use assignment expressions and typing.Literal
+dynamic = ["version", "dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/ipamo/reporter-utils"
+"Bug Tracker" = "https://github.com/ipamo/reporter-utils/issues"
+
+[tool.setuptools]
+packages = ["reporter_utils"]
+
+[tool.setuptools_scm]
+write_to = "reporter_utils/_version.py"
+
+[tool.setuptools.dynamic.dependencies]
+file = ['requirements.txt']
