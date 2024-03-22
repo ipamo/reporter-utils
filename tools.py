@@ -54,7 +54,6 @@ def command(handle = None):
 @command
 def build():
     clean()
-    test()
     docs()
     wheel()
 
@@ -79,13 +78,6 @@ def clean(path: Path = None):
                 clean(sub)
     else:
         pass
-
-
-# -----------------------------------------------------------------------------
-@command
-def test():    
-    print(f"{Color.YELLOW}Test{Color.RESET}")
-    _run('python -m unittest')
 
 
 # -----------------------------------------------------------------------------
